@@ -1,0 +1,11 @@
+/** css */
+
+#translateP{
+  position: fixed ;
+  z-index: 99999;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  background-color: rgb(74, 188, 255);
+  transition: left .5s cubic-bezier(.42,-0.3,.78,1.25), top .5s cubic-bezier(.42,-0.3,.78,1.25);
+}

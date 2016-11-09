@@ -1,0 +1,25 @@
+{
+  "name" : "翻译",
+  "description" : "翻译",
+  "manifest_version" : 2 ,
+  "version" : "0.0.1" ,
+  "homepage_url" : "http://www.xxxxxxxxx.com" ,
+  "content_security_policy" : "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'" ,
+  "incognito": "split",
+  "icons" : {
+    "128" : "/icon/logo.png" ,
+    "16" : "/icon/logo.png" ,
+    "48" : "/icon/logo.png"
+  } ,
+  "author" : "Hongv" ,
+  "permissions" : ["<all_urls>", "http://*/*", "https://*/*", "contextMenus", "storage", "clipboardWrite", "clipboardRead", "activeTab", "identity", "webRequest", "webRequestBlocking"],
+  "content_scripts" : [
+    {
+      "matches" : ["http://*/*", "https://*/*", "file:///*"],
+      "css": ["/css/main.css"],
+      "js" : ["/js/jquery-3.1.1.min.js", "/js/youdao-query.js", "content-script.js"]
+    }
+  ] ,
+  "minimum_chrome_version" : "29",
+  "web_accessible_resources": ["/css/main.css", "/js/jquery-3.1.1.min.js", "/js/youdao-query.js"]
+}
