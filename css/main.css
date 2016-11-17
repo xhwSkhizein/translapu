@@ -1,11 +1,18 @@
 /** css */
 
 #translateP{
-  position: fixed ;
-  z-index: 99999;
-  width: auto;
-  height: auto;
-  padding: 5px;
-  background-color: rgb(74, 188, 255);
-  transition: left .5s cubic-bezier(.42,-0.3,.78,1.25), top .5s cubic-bezier(.42,-0.3,.78,1.25);
+    position: fixed;
+    z-index: 99999;
+    width: auto;
+    height: auto;
+    color: #525252;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgb(255, 255, 255);
+    transition: left .5s cubic-bezier(.42,-0.3,.78,1.25), top .5s cubic-bezier(.42,-0.3,.78,1.25);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.29);
+    box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+    display: none;
 }
