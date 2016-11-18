@@ -49,7 +49,9 @@ function clearPreviousPanel(){
 
 function displayResult(x, y, data){
   var translateResult = "";
-  if(data){
+  
+  //check tranlationResult is empty ?
+  if(data.translation){
     // console.log(JSON.stringify(data));
     if(data.basic) {
       translateResult = data.basic.explains.join(", ");
@@ -61,7 +63,7 @@ function displayResult(x, y, data){
     }
     translateResult += "<br />" + data.translation;
   }else{
-    translateResult = "";
+    translateResult = "<br />" + "翻译失败";
   }
   var $translateResultPanel = $("<div>", {id: "translateP", style:"left: "+ x +"px;top: "+ (y + 11) +"px;"}).html(translateResult);
   $('body').append($translateResultPanel);
