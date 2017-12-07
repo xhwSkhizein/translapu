@@ -41,12 +41,19 @@ var Translapu = (function() {
     }
   }
 
+  var showPending = function(item){
+    $translateResultPanel = $(item.panel.html('translating...'));
+    $('body').append($translateResultPanel);
+    $("#translateP").slideDown(200);
+  }
+
   // 翻译
   var trans = function(item) {
     if (!item || !item.text || !item.panel) {
       console.info("获取选中失败，跳过");
       return;
     }
+    showPending(item);
     translate(item.text, function(data) {
       // TODO check data empty
       var translateResult;

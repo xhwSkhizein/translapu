@@ -40,7 +40,8 @@
 // }
 
 function translate(data, callback) {
-    if (!data) {
+    if (!data || data == '') {
+        callback({})
         return;
     }
     var keyFrom = "translateOnPage";
